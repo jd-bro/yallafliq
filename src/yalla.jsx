@@ -5,24 +5,22 @@ let menu = require("./menu.json");
 console.log(menu);
 menu = menu.Menu;
 console.log(menu);
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const code = urlParams.get('code')
-console.log(code);
 
-export const Yalla = () => {
-  var categories = getCategories();
+
+export class Yalla extends React.Component { 
+    state={"categories":getCategories()}
+  render(){
   return (
     <>
       <div className="menu-container">
-        {}
         {menu.map((data, key) => {
           return <div key={key}>{data.name}</div>;
         })}
       </div>
     </>
   );
-};
+  }
+}
 
 function getCategories() {
   var categories = [];
