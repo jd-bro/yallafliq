@@ -7,10 +7,11 @@ menu = menu.Menu;
 console.log(menu);
 
 export const Yalla = () => {
+  var categories = getCategories();
   return (
     <>
       <div className="menu-container">
-        {getCategories()}
+        {}
         {menu.map((data, key) => {
           return <div key={key}>{data.name}</div>;
         })}
@@ -23,10 +24,8 @@ function getCategories() {
   var categories = [];
   for (let i = 0; i < menu.length; i++) {
     let obj = menu[i];
-    return (
-      <div className="categ">
-        <h1>{obj.name}</h1>
-      </div>
-    );
+    if(!categories.includes(obj.category))
+         categories.push(obj.category);
   }
+  return categories;
 }

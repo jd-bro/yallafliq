@@ -4,6 +4,16 @@
       "name": "chicken biriyani",
       "price": "KWD 1.000",
       "category": "Biriyani"
+    },
+    {
+      "name": "beef biriyani",
+      "price": "KWD 1.200",
+      "category": "Biriyani"
+    },
+    {
+      "name": "Chicken Sandwich",
+      "price": "KWD 1.200",
+      "category": "Sandwich"
     }
   ]
 }
