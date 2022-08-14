@@ -5,6 +5,10 @@ let menu = require("./menu.json");
 console.log(menu);
 menu = menu.Menu;
 console.log(menu);
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const code = urlParams.get('code')
+console.log(code);
 
 export const Yalla = () => {
   var categories = getCategories();
