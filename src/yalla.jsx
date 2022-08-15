@@ -15,9 +15,9 @@ export class Yalla extends React.Component {
     <>
       <div className="menu-container">
           <Category categories = {this.state.categories}/>
-        {menu.map((data, key) => {
+        {/* {menu.map((data, key) => {
           return <div key={key}>{data.name}</div>;
-        })}
+        })} */}
       </div>
     </>
   );
