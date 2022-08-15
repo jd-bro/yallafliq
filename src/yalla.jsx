@@ -1,4 +1,5 @@
 import React from "react";
+import {Category} from "./category";
 let menu = require("./menu.json");
 
 //import "./styles.css";
@@ -13,6 +14,7 @@ export class Yalla extends React.Component {
   return (
     <>
       <div className="menu-container">
+          <Category categories = {this.state.categories}/>
         {menu.map((data, key) => {
           return <div key={key}>{data.name}</div>;
         })}
